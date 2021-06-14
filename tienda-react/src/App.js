@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { Encabezado } from './componentes/Encabezado/Encabezado.jsx';
 
 function App() {
   return (
     <div className="App">
+      <Encabezado/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +21,8 @@ function App() {
         </a>
       </header>
     </div>
+   
+  
   );
 }
 
