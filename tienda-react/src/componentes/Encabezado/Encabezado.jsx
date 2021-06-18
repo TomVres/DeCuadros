@@ -1,10 +1,11 @@
 import "./style.css"
+import brandLogo from '../../images/logo_decuadros.png'
 export const Encabezado = () => {
 
 return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-        <a className="navbar-brand" href="#">Mi Tienda React</a>
+        <div className="container-fluid">
+        <a className="navbar-brand" href="#"><img src={brandLogo} alt="Logo DeCuadros" /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -24,7 +25,7 @@ return (
             </li>
           </ul>
           <form className="form-inline">
-            <input className="form-control mr-sm-2" type="search" placeholder="Buscar un producto" aria-label="Buscar" />
+            <input className="form-control mr-sm-2" type="search" placeholder="Ingrese su busqueda" aria-label="Buscar" />
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
