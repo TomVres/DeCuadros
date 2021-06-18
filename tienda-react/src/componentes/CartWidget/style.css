@@ -1,0 +1,11 @@
+.icono-carrito {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: rgba(0,0,0,.9);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
+.icono-carrito:hover {
+    color: #FF9906;
+}

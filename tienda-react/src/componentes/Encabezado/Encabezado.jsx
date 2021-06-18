@@ -1,5 +1,7 @@
 import "./style.css"
 import brandLogo from '../../images/logo_decuadros.png'
+import { CartWidget } from '../CartWidget/CartWidget.jsx'
+
 export const Encabezado = () => {
 
 return (
@@ -28,6 +30,8 @@ return (
             <input className="form-control mr-sm-2" type="search" placeholder="Ingrese su busqueda" aria-label="Buscar" />
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
+          <CartWidget/>
+        
         </div>
         </div>
       </nav>
