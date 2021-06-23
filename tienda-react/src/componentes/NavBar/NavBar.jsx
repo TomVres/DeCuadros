@@ -2,7 +2,7 @@ import "./style.css"
 import brandLogo from '../../images/logo_decuadros.png'
 import { CartWidget } from '../CartWidget/CartWidget.jsx'
 
-export const Encabezado = () => {
+export const NavBar = () => {
 
 return (
     <nav className="navbar navbar-expand-lg navbar-light">

@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import { Encabezado } from './componentes/Encabezado/Encabezado.jsx';
 import { HomeContainer} from './componentes/HomeContainer/HomeContainer.jsx'
+import { ItemListContainer } from './componentes/ItemListContainer/ItemListContainer.jsx'
 
 function App() {
   return (
+<div>
 <HomeContainer/>
+<ItemListContainer greeting="Hola!"/>
+</div>
   );
 }
 
