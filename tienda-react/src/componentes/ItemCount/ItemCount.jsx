@@ -7,7 +7,10 @@ export const ItemCount = ({stock , initial}) => {
     const sumar = () => {
       if (quantity<stock) {
         setQuantity(Number(quantity)+1)
-      }
+      } /* else {
+       var botonSumar = document.querySelector(".plus-button");
+       botonSumar.classList.add("my-class");
+      } */
     }
 
     const restar = () => {
@@ -29,6 +32,10 @@ export const ItemCount = ({stock , initial}) => {
     const onAdd = () => {
       console.log("Agregaste "+ quantity + " items al carrito.")
   }
+
+
+
+
 
     return (
         <div className="itemcounter">
