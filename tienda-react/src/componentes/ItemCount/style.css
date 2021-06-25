@@ -2,6 +2,7 @@
     display: flex;
     margin-bottom: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .fa-plus-square , .fa-minus-square {
@@ -25,6 +26,7 @@
     border-radius: 0;
     width: 80px;
     text-align: center;
+    margin-bottom: 10px;
 
 }
 
@@ -40,3 +42,7 @@
     color: red;
     padding-top: 2px;
 }
+
+.line-break {
+    width: 100%;
+  }
