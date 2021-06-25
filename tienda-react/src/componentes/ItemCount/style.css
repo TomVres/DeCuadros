@@ -1,5 +1,7 @@
 .itemcounter {
     display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
 }
 
 .fa-plus-square , .fa-minus-square {
@@ -19,9 +21,9 @@
 
 .quant {
     border: 1px solid gray;
-    padding: 2px 50px;
+    padding: 2px 10px;
     border-radius: 0;
-    width: 150px;
+    width: 80px;
     text-align: center;
 
 }

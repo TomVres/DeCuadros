@@ -1,0 +1,11 @@
+.icono-carrito-btn {
+    padding-right: .5rem;
+    padding-left: 0rem;
+    color:white;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
+.icono-carrito-btn:hover {
+    color: white;
+}
