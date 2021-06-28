@@ -14,7 +14,7 @@ export const ItemCount = ({stock , initial}) => {
     }
 
     const restar = () => {
-      if (quantity!=1) {
+      if (quantity!==1) {
         setQuantity(Number(quantity)-1)
 
       }
