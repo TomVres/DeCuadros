@@ -9,10 +9,9 @@ import { Item } from '../Item/Item.jsx'
 export const HomeContainer = () => {
     return (  
         
-    <div className="App">
+    <div className="App container-fluid">
     <NavBar/>
-    <ItemListContainer greeting="Hola!"/>
-    <Item/>
+    <ItemListContainer/>
   </div>
  
 )
