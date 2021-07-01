@@ -10,7 +10,6 @@ export const HomeContainer = () => {
     return (  
         
     <div className="App container-fluid">
-    <NavBar/>
     <ItemListContainer/>
   </div>
  

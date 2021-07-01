@@ -1,7 +1,7 @@
 import "./style.css"
 import brandLogo from '../../images/logo_decuadros.png'
 import { CartWidget } from '../CartWidget/CartWidget.jsx'
-
+import {Link} from "react-router-dom"
 export const NavBar = () => {
 
 return (
@@ -14,7 +14,7 @@ return (
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto mr-5">
             <li className="nav-item active">
-              <a className="nav-link" href="#">Inicio <span className="sr-only">(current)</span></a>
+              <a className="nav-link"><Link to="/">Inicio</Link></a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Productos</a>
@@ -23,7 +23,7 @@ return (
               <a className="nav-link" href="#">Nosotros</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contacto</a>
+              <a className="nav-link" ><Link to="/contacto">Contacto</Link></a>
             </li>
           </ul>
           <form className="form-inline">
