@@ -2,9 +2,8 @@ import "./style.css"
 import { ItemCount } from '../ItemCount/ItemCount.jsx'
 import { Link } from 'react-router-dom'
 
-export const Item = ({title, price , img , stock}) => {
+export const Item = ({title, price , img , stock, id}) => {
 
- const  productId = price 
 
     return (
         <div className="col-md-2">
@@ -16,7 +15,7 @@ export const Item = ({title, price , img , stock}) => {
           <p className="card-text price-text">${price}</p>
 
           <ItemCount stock="5"/>
-          <button><Link to={"/producto/"+productId}>Ver Detalle</Link></button>
+          <button><Link to={"/producto/"+id}>Ver Detalle</Link></button>
         </div>
         </div>
       </div>

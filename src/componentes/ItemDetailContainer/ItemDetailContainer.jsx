@@ -1,8 +1,7 @@
 import { Item } from '../Item/Item.jsx';
 import {useEffect, useState} from "react";
 import "./style.css"
-
-export const ItemListContainer = () => {
+export const ItemDetailContainer = () => {
 
         const [products, setProducts] = useState ([]);
       
@@ -22,16 +21,14 @@ export const ItemListContainer = () => {
           let productList = await getData();
           let aux = productList.map(element => {
             return {
-              id: element.id,
               title: element.title,
               img: element.thumbnail,
               price: element.price,
-              
+              id: element.id,
+
             }
           });
           setProducts(aux);
-
-          
       
         }
       
@@ -42,17 +39,15 @@ export const ItemListContainer = () => {
       if (products.length > 0) {
        
         console.log(products)
-
         
       }
       
         return (
-      <div className="row pt-5">
+      <div className="row">
       {products.map((element,index) => {
         return (
          // <span key={index}> 
-          
-          <Item title={element.title} img={element.img} price={element.price} id={element.id} />
+          <Item title={element.title} img={element.img} price={element.price} />
          // </span>
         )
       })}
@@ -60,6 +55,3 @@ export const ItemListContainer = () => {
       </div>
         );
       }
-
-
-export default ItemListContainer

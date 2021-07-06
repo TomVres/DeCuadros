@@ -1,0 +1,22 @@
+.main-slider {
+    background-image: url(../../images/mainslider_desktop.jpg);
+    display: flex;
+    align-items: center;
+    height: 600px;
+}
+
+
+.slider-title {
+    color: white;
+    float: left;
+    font-size: 8.3rem;
+    text-align: left;
+    line-height: 7.5rem;
+    font-weight: 800;
+}
+
+
+.slider-title .orange {
+  color:#FF9906!important;
+
+}
