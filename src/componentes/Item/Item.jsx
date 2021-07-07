@@ -13,8 +13,6 @@ export const Item = ({title, price , img , stock, id}) => {
           <h5 className="card-title">{title}</h5>
           <p className="card-text stock-text">Stock disponible: {stock}</p>
           <p className="card-text price-text">${price}</p>
-
-          <ItemCount stock="5"/>
           <button><Link to={"/producto/"+id}>Ver Detalle</Link></button>
         </div>
         </div>
