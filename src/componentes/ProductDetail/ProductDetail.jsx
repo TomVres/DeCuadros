@@ -13,9 +13,9 @@ export const ProductDetail = ({data}) => {
 
   const [stock, setStock] = useState(10);
 
-  function updateStock(quantity) {
-    if (stock>=quantity) {
-    setStock(stock - quantity);
+  function updateStock() {
+    if (stock>=1) {
+    setStock(stock - 1);
     console.log(stock)
   }
   }
