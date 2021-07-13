@@ -5,6 +5,10 @@ import { ContactContainer } from './componentes/ContactContainer/ContactContaine
 import { Footer } from './componentes/Footer/Footer.jsx';
 import { ProductDetailContainer} from './componentes/ProductDetailContainer/ProductDetailContainer.jsx';
 import { BrowserRouter, Switch, Route, Link, useParams } from 'react-router-dom';
+import { ShopContext , ShopComponentContext} from './context/ShopContext.jsx';
+import { CartContext , CartComponentContext } from './context/CartContext.jsx';
+
+
 
 
 
@@ -12,6 +16,9 @@ function App() {
 
   return (
 <div>
+<ShopComponentContext>
+<CartComponentContext>
+
 <BrowserRouter>
   <NavBar/>
     <Switch>
@@ -22,6 +29,9 @@ function App() {
     </Switch>
     <Footer/>
 </BrowserRouter>
+</CartComponentContext>
+</ShopComponentContext>
+
 
 
 </div>

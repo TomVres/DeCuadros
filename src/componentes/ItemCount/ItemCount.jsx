@@ -1,7 +1,13 @@
+import { useContext } from "react"
 import { useState } from "react"
+import { CartContext } from "../../context/CartContext"
 import "./style.css"
 
-export const ItemCount = ({quantity, updateStock, minus, plus }) => {
+export const ItemCount = ({quantity, minus, plus, data }) => {
+
+  const {onAdd} = useContext(CartContext)
+  const item = useContext(CartContext)
+
  
     return (
         <div className="itemcounter">
@@ -9,7 +15,7 @@ export const ItemCount = ({quantity, updateStock, minus, plus }) => {
         <a className="quant">{quantity}</a>
         <div className="plus-button" onClick={plus}><i className="fas fa-plus-square fa-lg" /></div>
         <div className="line-break"></div>
-        <a href="#" className="btn btn-primary add-to-cart-btn" onClick={updateStock}><i className="fas fa-shopping-cart icono-carrito icono-carrito-btn" />Sumar al carrito</a>
+        <a href="#" className="btn btn-primary add-to-cart-btn" onClick={()=>{onAdd(item, quantity)}}><i className="fas fa-shopping-cart icono-carrito icono-carrito-btn" />Sumar al carrito</a>
 
       </div>
     )

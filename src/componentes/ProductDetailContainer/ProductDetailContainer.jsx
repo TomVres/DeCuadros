@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductDetail } from '../ProductDetail/ProductDetail.jsx'
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 
 export const ProductDetailContainer = () => {

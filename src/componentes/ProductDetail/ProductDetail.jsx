@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { ItemCount } from '../ItemCount/ItemCount.jsx'
 import {useState} from 'react';
 import './style.css'
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 
 
@@ -15,7 +17,7 @@ export const ProductDetail = ({data}) => {
 
   function updateStock() {
     if (stock>=1) {
-    setStock(stock - 1);
+    setStock(stock - quantity);
     console.log(stock)
   }
   }
@@ -27,6 +29,8 @@ export const ProductDetail = ({data}) => {
   function plus() {
     if (quantity<stock) {
       setQuantity(Number(quantity)+1)
+      console.log(quantity)
+
       
     } 
   }
@@ -54,8 +58,10 @@ export const ProductDetail = ({data}) => {
           <span>${data.price}</span>
         </div>
         <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+        <div className="small mb-1">Stock disponible: {stock}</div>
         <div className="d-flex">
-        <ItemCount stock={stock} updateStock={updateStock} plus={plus} minus={minus} quantity={quantity}/> 
+
+        <ItemCount stock={stock} updateStock={updateStock} plus={plus} minus={minus} quantity={quantity} data={data}/> 
         <Link to="/cart" className="btn btn-go-to-cart">Ver Carrito</Link>         
           
         </div>
