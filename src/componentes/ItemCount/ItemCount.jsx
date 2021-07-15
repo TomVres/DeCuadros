@@ -6,7 +6,6 @@ import "./style.css"
 export const ItemCount = ({quantity, minus, plus, data }) => {
 
   const {onAdd} = useContext(CartContext)
-  const item = useContext(CartContext)
 
  
     return (
@@ -15,7 +14,7 @@ export const ItemCount = ({quantity, minus, plus, data }) => {
         <a className="quant">{quantity}</a>
         <div className="plus-button" onClick={plus}><i className="fas fa-plus-square fa-lg" /></div>
         <div className="line-break"></div>
-        <a href="#" className="btn btn-primary add-to-cart-btn" onClick={()=>{onAdd(item, quantity)}}><i className="fas fa-shopping-cart icono-carrito icono-carrito-btn" />Sumar al carrito</a>
+        <a href="#" className="btn btn-primary add-to-cart-btn" onClick={()=>{onAdd(data, quantity)}}><i className="fas fa-shopping-cart icono-carrito icono-carrito-btn" />Sumar al carrito</a>
 
       </div>
     )

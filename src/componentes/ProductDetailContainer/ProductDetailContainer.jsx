@@ -20,7 +20,6 @@ export const ProductDetailContainer = () => {
             })
         },[productId])
 
-        console.log(product)
 
         return (
             
