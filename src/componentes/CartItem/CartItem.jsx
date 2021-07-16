@@ -1,4 +1,4 @@
-export const CartItem = ({title, price, quantity}) => {
+export const CartItem = ({title, price, quantity, img}) => {
     return (
         <div>
         <li className="clearfix">

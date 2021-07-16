@@ -15,7 +15,7 @@ export const CartComponentContext = ({children}) => {
 
 
     const onAdd = (data, quantity) => {
-        setCart([...cart, {item: data.id, quantity: quantity}]) 
+        setCart([...cart, {item: data.id, quantity: quantity, price: data.price, img: data.thumbnail, title: data.title}]) 
         console.log(quantity)
         console.log(data)
         console.log(cart)
@@ -32,6 +32,7 @@ export const CartComponentContext = ({children}) => {
         cart.forEach(function(d) {
           if (holder.hasOwnProperty(d.item)) {
             holder[d.item] = holder[d.item] + d.quantity;
+
           } else {
             holder[d.item] = d.quantity;
           }
@@ -47,6 +48,9 @@ export const CartComponentContext = ({children}) => {
     
       setQuantity(filtered.length)
       setFilteredCart(filtered)
+
+      
+
 
 
        
