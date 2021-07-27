@@ -1,0 +1,10 @@
+  var firebaseConfig = {
+    apiKey: "AIzaSyA6GkS-7Addvak13mFdthnwl_gSwX_i6Ow",
+    authDomain: "decuadros-de873.firebaseapp.com",
+    projectId: "decuadros-de873",
+    storageBucket: "decuadros-de873.appspot.com",
+    messagingSenderId: "58951076185",
+    appId: "1:58951076185:web:d1967b8f6b20df7baf6448"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);

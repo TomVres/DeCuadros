@@ -8,17 +8,22 @@ import { CartContext } from "../../context/CartContext"
 export const ProductDetailContainer = () => {
 
         const {productId} = useParams()
+        let productsList = useContext(CartContext);
+        let list = productsList.productsList
+
         const [product, setProduct] = useState ([]) 
         
 
      useEffect(() => {
-            fetch("https://api.mercadolibre.com/items/"+productId)
-            .then(res => res.json())
-            .then (res=>{
-                setProduct(res)
-                
-            })
-        },[productId])
+
+        var result = list.filter(obj => {
+            return obj.slug === productId
+          })
+          setProduct(result[0])
+        },[])
+
+        console.log(product)
+        
 
 
         return (

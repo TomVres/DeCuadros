@@ -1,62 +1,27 @@
 import { Item } from '../Item/Item.jsx';
 import {useEffect, useState} from "react";
 import "./style.css"
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext.jsx';
 
 export const ItemListContainer = () => {
 
-        const [products, setProducts] = useState ([]);
-      
-        async function getData () {
-          
-          const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=cuadros");
-          const data = await response.json();
-          return data.results;
-      }
-      
-      useEffect (() => {
-      
-        let values = 1;
-      
-        const waitForData = async () => {
-      
-          let productList = await getData();
-          let aux = productList.map(element => {
-            return {
-              id: element.id,
-              title: element.title,
-              img: element.thumbnail,
-              price: element.price,
-              
-            }
-          });
-          setProducts(aux);
-
-          
-      
-        }
-      
-        waitForData()
-      
-      },[])
-      
-      if (products.length > 0) {
-       
-        console.log(products)
-
-        
-      }
+        const productsList = useContext(CartContext)
+        const products = productsList.productsList
       
         return (
+      <div className="container">
       <div className="row pt-5">
       {products.map((element,index) => {
         return (
          // <span key={index}> 
           
-          <Item title={element.title} img={element.img} price={element.price} id={element.id} />
+          <Item title={element.name} img={element.img} price={element.price} id={element.id} stock={element.stock} category={element.category} slug={element.slug}/>
          // </span>
         )
       })}
       
+      </div>
       </div>
         );
       }
