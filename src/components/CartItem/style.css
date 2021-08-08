@@ -1,0 +1,8 @@
+.button-remove {
+    height: 40px;
+}
+
+.cart-item {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding-bottom: 2rem;
+}

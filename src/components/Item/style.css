@@ -1,0 +1,73 @@
+.icono-carrito-btn {
+  padding-right: .5rem;
+  padding-left: 0rem;
+  color: white;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  cursor: pointer;
+}
+
+.icono-carrito-btn:hover {
+  color: white;
+}
+
+.card {
+  height: 100%;
+}
+
+.col-md-2 {
+  margin-bottom: 2.5rem;
+}
+
+.card-img-top {
+  object-fit: scale-down;
+  max-height: 20rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  
+}
+
+.stock-text {
+  font-size: 80%;
+}
+
+.capitalize {
+  text-transform: capitalize!important;
+}
+
+.text-small p {
+  margin: 0;
+}
+
+.price-text {
+  margin-top: 12px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.3rem;
+  
+}
+
+.details-btn {
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 80%;
+  color: #FF9906;
+  display: none;
+
+
+}
+
+a {
+  color: black!important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card-body {
+  padding: .5rem 1.25rem;
+}
